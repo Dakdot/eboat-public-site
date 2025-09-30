@@ -1,103 +1,191 @@
-import Image from "next/image";
+import { HomeLinks } from "@/components/home-links";
+
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="flex flex-col items-center">
+      <div className="w-full">
+        <div className="w-full h-[390px] md:h-[400px] pt-[70px] md:pt-[130px] bg-gradient-to-b to-[#a32638] from-[#7d1524] relative">
+          <div className="flex flex-col gap-4 items-center">
+            <div className="flex flex-col md:flex-row items-center gap-2">
+              <img
+                src={"/eboat-logo-red.png"}
+                width={150}
+                alt="Stevens Electric Boatworks Logo"
+                className="pointer-events-none"
+              />
+              <div>
+                <h2 className="text-white/75 text-xl">
+                  Stevens Institute of Technology
+                </h2>
+                <h1 className="font-inter font-bold text-3xl md:text-6xl text-white">
+                  Electric Boatworks
+                </h1>
+              </div>
+            </div>
+            <HomeLinks />
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+        <svg
+          className="w-full h-12 pointer-events-none absolute left-0 top-[390px] md:top-[400px]"
+          viewBox="0 0 100 20"
+          preserveAspectRatio="none"
+          style={{ zIndex: -10 }}
         >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+          <polygon
+            points="0,0 100,0 100,4 50,16 0,4"
+            fill="black"
+            opacity="0.5"
+            filter="blur(2px)"
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+
+          <polygon points="0,0 100,0 50,12" fill="#a32638" />
+        </svg>
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          className="relative -z-20 object-cover w-full h-[500px] md:h-[900px]"
         >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+          <source src="/landing-1.mp4" type="video/mp4" />
+          <source src="/landing.webm" type="video/webm" />
+          Uh-oh! Your browser does not support the video tag.
+        </video>
+        {/* <img
+          src={"/landing-1.jpg"}
+          className="relative -z-20 object-cover w-full h-[400px] md:h-[700px]"
+          style={{ objectPosition: "center bottom" }}
+          alt="Electric boat on the water"
+        /> */}
+        <svg
+          className="w-full h-12 -translate-y-12"
+          style={{ pointerEvents: "none", position: "absolute", left: 0 }}
+          viewBox="0 0 100 12"
+          preserveAspectRatio="none"
         >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
+          <polygon points="0,0 50,12 100,0 100,12 0,12" fill="#44403b" />
+        </svg>
+        <div className="flex flex-col py-16 text-white bg-gradient-to-b from-stone-700 to-stone-600 w-full relative items-center">
+          <div className="flex gap-6 items-center flex-col md:flex-row px-4">
+            <img
+              src={"/landing-2.jpg"}
+              width={400}
+              className="rounded-sm border shadow"
+              alt="Electric boat on a trailer"
+            />
+            <div className="lg:max-w-xl space-y-2 md:text-lg text-white/85">
+              <h2 className="text-2xl md:text-4xl font-inter text-white">
+                Engineering the <b>future</b> of sustainable watercraft.
+              </h2>
+              <p>
+                We’re a student-driven team pioneering high-performance electric
+                boats for national competitions. From design to launch, our
+                mission is to prove that clean technology can thrive on the
+                water.
+              </p>
+              <Link
+                className="underline decoration-dotted hover:decoration-solid"
+                href={"/fleet"}
+              >
+                Explore our fleet
+              </Link>
+            </div>
+          </div>
+        </div>
+        <svg
+          className="w-full h-12 pointer-events-none absolute left-0 "
+          viewBox="0 0 100 20"
+          preserveAspectRatio="none"
+          style={{ zIndex: 10 }}
+        >
+          <polygon
+            points="0,0 100,0 100,4 50,16 0,4"
+            fill="black"
+            opacity="0.3"
+            filter="blur(2px)"
           />
-          Go to nextjs.org →
-        </a>
-      </footer>
+
+          <polygon points="0,0 100,0 50,12" fill="#57534d" />
+        </svg>
+        <div className="flex flex-col pt-20 pb-16 bg-gradient-to-b from-stone-200 to-stone-50 w-full relative items-center">
+          <div className="flex gap-6 items-center flex-col px-4 md:flex-row">
+            <div className="lg:max-w-xl space-y-2 md:text-lg text-right text-black/80">
+              <h2 className="text-2xl md:text-4xl font-inter text-black">
+                The <b>crew</b> behind the current.
+              </h2>
+              <p>
+                Our team brings together students from diverse disciplines —
+                united by a shared goal: to push the boundaries of marine
+                engineering and renewable energy.
+              </p>
+              <Link
+                className="underline decoration-dotted hover:decoration-solid"
+                href={"/fleet"}
+              >
+                Meet the team
+              </Link>
+            </div>
+            <img
+              src={"/landing-3.jpg"}
+              className="rounded-sm border shadow md:w-[400px]"
+              alt="Electric boat on a trailer"
+            />
+          </div>
+        </div>
+        <svg
+          className="w-full h-12 pointer-events-none absolute left-0 "
+          viewBox="0 0 100 20"
+          preserveAspectRatio="none"
+          style={{ zIndex: 10 }}
+        >
+          <polygon
+            points="0,0 100,0 100,4 50,16 0,4"
+            fill="black"
+            opacity="0.3"
+            filter="blur(2px)"
+          />
+
+          <polygon points="0,0 100,0 50,12" fill="#fafaf9" />
+        </svg>
+
+        <div className="flex flex-col pt-20 pb-16 items-center md:text-lg">
+          <h2 className="text-2xl md:text-4xl font-inter">Our Supporters</h2>
+          <Link
+            href={"/support-us"}
+            className="underline decoration-dotted hover:decoration-solid"
+          >
+            Learn how to support us
+          </Link>
+        </div>
+        <svg
+          className="w-full h-12 pointer-events-none absolute left-0 "
+          viewBox="0 0 100 20"
+          preserveAspectRatio="none"
+          style={{ zIndex: 10 }}
+        >
+          <polygon
+            points="0,0 100,0 100,4 50,16 0,4"
+            fill="black"
+            opacity="0.3"
+            filter="blur(2px)"
+          />
+
+          <polygon points="0,0 100,0 50,12" fill="#fafaf9" />
+        </svg>
+
+        <div className="flex flex-col pt-20 pb-16 items-center md:text-lg bg-gradient-to-b from-[#f0e3ce] to-[#fff2d7]">
+          <h2 className="text-2xl md:text-4xl font-inter">Get Involved</h2>
+          <Link
+            href={"/support-us"}
+            className="underline decoration-dotted hover:decoration-solid"
+          >
+            Learn how to join us
+          </Link>
+        </div>
+      </div>
     </div>
   );
 }
