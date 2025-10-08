@@ -1,4 +1,15 @@
 import Link from "next/link";
+import {
+  Dialog,
+  DialogHeader,
+  DialogContent,
+  DialogTrigger,
+  DialogTitle,
+  DialogDescription,
+  DialogFooter,
+  DialogClose,
+} from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
 
 export default function AboutPage() {
   return (
@@ -50,9 +61,33 @@ export default function AboutPage() {
               </Link>
             </li>
             <li>
-              <Link href={"/fleet/unmanned"} className="link">
+              <Dialog>
+                <DialogTrigger asChild>
+                  <span className="link hover:cursor-pointer">
+                    Learn more about unmanned autonomous vessel
+                  </span>
+                </DialogTrigger>
+                <DialogContent>
+                  <DialogHeader>
+                    <DialogTitle className="font-sans">
+                      This page is under construction.
+                    </DialogTitle>
+                    <DialogDescription>
+                      Like the boat itself, this page is still under
+                      construction. We hope to have updates very soon on the
+                      progress of the unmanned vessel!
+                    </DialogDescription>
+                  </DialogHeader>
+                  <DialogFooter>
+                    <DialogClose asChild>
+                      <Button>OK</Button>
+                    </DialogClose>
+                  </DialogFooter>
+                </DialogContent>
+              </Dialog>
+              {/* <Link href={"/fleet/unmanned"} className="link">
                 Learn more about the unmanned autonomous boat
-              </Link>
+              </Link> */}
             </li>
             <li>
               <a
@@ -87,12 +122,15 @@ export default function AboutPage() {
         </h2>
         <div className="max-w-3xl space-y-8 md:space-y-12">
           <div className="flex items-center gap-6">
-            <img
+            {/* <img
               src={"/placeholder-1.jpg"}
               width={100}
               className="rounded-full"
               alt="Placeholder"
-            />
+            /> */}
+            <div className="relative flex items-center justify-center border rounded-full aspect-square h-[100px] text-white/50 border-white/50">
+              <p className="text-4xl">1</p>
+            </div>
             <div>
               <h3 className="font-inter font-bold text-2xl">Drivetrain</h3>
               <p>
@@ -102,12 +140,15 @@ export default function AboutPage() {
             </div>
           </div>
           <div className="flex items-center gap-6">
-            <img
+            {/* <img
               src={"/placeholder-1.jpg"}
               width={100}
               className="rounded-full"
               alt="Placeholder"
-            />
+            /> */}
+            <div className="relative flex items-center justify-center border rounded-full aspect-square h-[100px] text-white/50 border-white/50">
+              <p className="text-4xl">2</p>
+            </div>
             <div>
               <h3 className="font-inter font-bold text-2xl">Cooling</h3>
               <p>
@@ -117,12 +158,15 @@ export default function AboutPage() {
             </div>
           </div>
           <div className="flex items-center gap-6">
-            <img
+            {/* <img
               src={"/placeholder-1.jpg"}
               width={100}
               className="rounded-full"
               alt="Placeholder"
-            />
+            /> */}
+            <div className="relative flex items-center justify-center border rounded-full aspect-square h-[100px] text-white/50 border-white/50">
+              <p className="text-4xl">3</p>
+            </div>
             <div>
               <h3 className="font-inter font-bold text-2xl">Batteries</h3>
               <p>
@@ -133,12 +177,15 @@ export default function AboutPage() {
             </div>
           </div>
           <div className="flex items-center gap-6">
-            <img
+            {/* <img
               src={"/placeholder-1.jpg"}
               width={100}
               className="rounded-full"
               alt="Placeholder"
-            />
+            /> */}
+            <div className="relative flex items-center justify-center border rounded-full aspect-square h-[100px] text-white/50 border-white/50">
+              <p className="text-4xl">4</p>
+            </div>
             <div>
               <h3 className="font-inter font-bold text-2xl">
                 Computer-Aided Design
@@ -150,12 +197,15 @@ export default function AboutPage() {
             </div>
           </div>
           <div className="flex items-center gap-6">
-            <img
+            {/* <img
               src={"/placeholder-1.jpg"}
               width={100}
               className="rounded-full"
               alt="Placeholder"
-            />
+            /> */}
+            <div className="relative flex items-center justify-center border rounded-full aspect-square h-[100px] text-white/50 border-white/50">
+              <p className="text-4xl">5</p>
+            </div>
             <div>
               <h3 className="font-inter font-bold text-2xl">Control Systems</h3>
               <p>
@@ -167,12 +217,15 @@ export default function AboutPage() {
             </div>
           </div>
           <div className="flex items-center gap-6">
-            <img
+            {/* <img
               src={"/placeholder-1.jpg"}
               width={100}
               className="rounded-full"
               alt="Placeholder"
-            />
+            /> */}
+            <div className="relative flex items-center justify-center border rounded-full aspect-square h-[100px] text-white/50 border-white/50">
+              <p className="text-4xl">6</p>
+            </div>
             <div>
               <h3 className="font-inter font-bold text-2xl">Unmanned</h3>
               <p>
@@ -183,12 +236,15 @@ export default function AboutPage() {
             </div>
           </div>
           <div className="flex items-center gap-6">
-            <img
+            {/* <img
               src={"/placeholder-1.jpg"}
               width={100}
               className="rounded-full"
               alt="Placeholder"
-            />
+            /> */}
+            <div className="relative flex items-center justify-center border rounded-full aspect-square h-[100px] text-white/50 border-white/50">
+              <p className="text-4xl">7</p>
+            </div>
             <div>
               <h3 className="font-inter font-bold text-2xl">
                 Research & Development
@@ -204,7 +260,7 @@ export default function AboutPage() {
         </div>
       </div>
       <svg
-        className="w-full h-12 pointer-events-none"
+        className="w-full h-12 pointer-events-none -mb-12"
         viewBox="0 0 100 20"
         preserveAspectRatio="none"
       >
@@ -217,9 +273,42 @@ export default function AboutPage() {
 
         <polygon points="0,0 100,0 50,12" fill="#57534d" />
       </svg>
-      <div className="-pt-20 pb-16">
-        <h2>Our History</h2>
+      <div className="flex flex-col items-center py-16 text-white bg-gradient-to-b to-[#a32638] from-[#7d1524]">
+        <div className="flex flex-col items-center max-w-3xl gap-8 text-lg p-4">
+          <h2 className="font-sans font-bold text-4xl">Our History</h2>
+          <p>
+            In 2016 Stevens fielded its first electric boat and student team for
+            collegiate competition. Since then, there have been six
+            multi-disciplinary senior design teams that have built on that
+            team&apos;s initial design and success.
+          </p>
+          <p>
+            Our unmanned team finished second in the PEP competition in 2022,
+            and our manned team finished second in 2024.
+          </p>
+          <p>
+            In 2024, a new club-based team was formed and led by a group of
+            smart, dedicated and able freshmen and sophomores. This new club
+            went on to win the National Planing Hull Championship at ASNE &
+            ONR&apos;s Promoting Electric Propulsion event in Virginia Beach in
+            April 2025.
+          </p>
+        </div>
       </div>
+      <svg
+        className="w-full h-12 pointer-events-none -mb-12"
+        viewBox="0 0 100 20"
+        preserveAspectRatio="none"
+      >
+        <polygon
+          points="0,0 100,0 100,4 50,16 0,4"
+          fill="black"
+          opacity="0.5"
+          filter="blur(2px)"
+        />
+
+        <polygon points="0,0 100,0 50,12" fill="#a32638" />
+      </svg>
     </div>
   );
 }

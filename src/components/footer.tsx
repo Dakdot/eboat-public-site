@@ -4,8 +4,8 @@ import Link from "next/link";
 export const Footer = () => {
   return (
     <div className="flex flex-col gap-6 items-center py-20 bg-stone-300 px-4">
-      <div className="flex gap-6">
-        <div className="flex-1">
+      <div className="flex md:flex-row flex-col gap-6">
+        <div className="flex-2">
           <p className="font-bold">Stevens Electric Boatworks</p>
           <p>
             Part of{" "}
@@ -51,6 +51,21 @@ export const Footer = () => {
             </li>
           </ul>
         </div>
+        <div className="flex-1">
+          <p className="font-bold">Support Us</p>
+          <ul>
+            <li>
+              <Link href={"/support-us"} className="link">
+                Our Supporters
+              </Link>
+            </li>
+            <li>
+              <Link href={"/support-us#become-a-sponsor"} className="link">
+                Become a Sponsor
+              </Link>
+            </li>
+          </ul>
+        </div>
       </div>
       <div className="flex gap-10">
         <a
@@ -61,7 +76,7 @@ export const Footer = () => {
           <SiInstagram className="hover:text-black/50 transition-all" />
         </a>
         <a
-          href={"https://www.instagram.com/stevenseboat/"}
+          href={"https://www.linkedin.com/company/stevenseboat/"}
           rel="noopener noreferrer"
           target="_blank"
         >

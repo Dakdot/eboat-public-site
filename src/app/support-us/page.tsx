@@ -56,6 +56,19 @@ export default function SupportUsPage() {
               </span>{" "}
               Sponsors
             </h2>
+            <a
+              href="https://sname.org/"
+              rel="noopener noreferrer"
+              target="_"
+              className="link grayscale hover:grayscale-0 transition-all"
+            >
+              <div className="flex items-center gap-4">
+                <img src={"/support/gold-1.png"} width={100} alt="SNAME logo" />
+                Society of Naval Architects and Marine Engineers;
+                <br />
+                SIT Student Chapter
+              </div>
+            </a>
           </div>
           <div className="flex flex-col gap-6 items-center">
             <h2 className="font-sans font-light text-3xl">

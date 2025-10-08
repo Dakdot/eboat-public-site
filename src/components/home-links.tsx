@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const links = [
   { title: "Learn More", url: "/about" },
-  { title: "Get Involved", url: "" },
+  { title: "Get Involved", url: "https://ducklink.stevens.edu/sname/home/" },
   { title: "Support Us", url: "/support-us" },
 ];
 

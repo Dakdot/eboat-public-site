@@ -132,7 +132,7 @@ export default function Home() {
 
         <div className="flex flex-col gap-8 pt-20 pb-16 items-center md:text-lg ">
           <h2 className="text-2xl md:text-4xl font-inter">Our Supporters</h2>
-          <div className="flex gap-12 items-center">
+          <div className="flex gap-12 items-center overflow-x-auto px-4">
             <a
               href="https://navalengineers.org"
               rel="noopener noreferrer"
@@ -144,6 +144,14 @@ export default function Home() {
                 width={100}
                 alt="American Society of Naval Engineers logo"
               />
+            </a>
+            <a
+              href="https://sname.org/"
+              rel="noopener noreferrer"
+              target="_"
+              className="link grayscale hover:grayscale-0 transition-all"
+            >
+              <img src={"/support/gold-1.png"} width={100} alt="SNAME logo" />
             </a>
             <a
               href="https://www.dhxelectricmachines.com/"
@@ -181,7 +189,7 @@ export default function Home() {
           <polygon points="0,0 100,0 50,12" fill="#ffffff" />
         </svg>
 
-        <div className="flex flex-col pt-20 pb-16 items-center md:text-lg text-white bg-gradient-to-b to-[#a32638] from-[#7d1524]">
+        {/* <div className="flex flex-col pt-20 pb-16 items-center md:text-lg text-white bg-gradient-to-b to-[#a32638] from-[#7d1524]">
           <h2 className="text-2xl md:text-4xl font-inter">Get Involved</h2>
           <Link
             href={"/support-us"}
@@ -204,7 +212,7 @@ export default function Home() {
           />
 
           <polygon points="0,0 100,0 50,12" fill="#a32638" />
-        </svg>
+        </svg> */}
       </div>
     </div>
   );
