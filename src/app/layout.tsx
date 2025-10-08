@@ -5,6 +5,7 @@ import {
   Fira_Code,
   Fira_Sans,
   Roboto,
+  PT_Serif,
 } from "next/font/google";
 import "./globals.css";
 import { NavBar } from "@/components/nav-bar";
@@ -36,6 +37,11 @@ const roboto = Roboto({
   subsets: ["latin"],
 });
 
+const pt_serif = PT_Serif({
+  variable: "--font-pt-serif",
+  weight: ["400", "700"],
+});
+
 export const metadata: Metadata = {
   title: "Stevens Electric Boatworks",
 };
@@ -48,7 +54,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${newsreader.variable} ${fira_code.variable} ${fira_sans.variable} ${roboto.variable} antialiased`}
+      className={`${inter.variable} ${pt_serif.variable} ${fira_code.variable} ${fira_sans.variable} ${roboto.variable} antialiased`}
     >
       <meta name="apple-mobile-web-app-title" content="SIT E-Boat" />
       <body>

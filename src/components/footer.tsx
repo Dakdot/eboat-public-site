@@ -52,13 +52,30 @@ export const Footer = () => {
           </ul>
         </div>
       </div>
-      <div>
+      <div className="flex gap-10">
         <a
           href={"https://www.instagram.com/stevenseboat/"}
           rel="noopener noreferrer"
           target="_blank"
         >
-          <SiInstagram className="hover:text-black/50" />
+          <SiInstagram className="hover:text-black/50 transition-all" />
+        </a>
+        <a
+          href={"https://www.instagram.com/stevenseboat/"}
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <svg width={24} height={24}>
+            <image
+              href="/icons/linked_in.svg"
+              width="24"
+              height="24"
+              preserveAspectRatio="xMidYMid meet"
+              aria-hidden="true"
+              focusable="false"
+              className="hover:brightness-125 transition-all"
+            />
+          </svg>
         </a>
       </div>
     </div>

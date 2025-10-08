@@ -3,7 +3,7 @@ import Link from "next/link";
 const links = [
   { title: "Learn More", url: "/about" },
   { title: "Get Involved", url: "" },
-  { title: "Support Us", url: "" },
+  { title: "Support Us", url: "/support-us" },
 ];
 
 export const HomeLinks = () => {
@@ -13,7 +13,7 @@ export const HomeLinks = () => {
         <Link
           key={idx}
           href={e.url}
-          className="border rounded-full py-2 md:py-1 px-4 cursor-pointer md:text-lg bg-white/70 hover:bg-white/50 transition-all backdrop-blur-lg text-center"
+          className="border rounded-full py-2 md:py-1 px-4 cursor-pointer md:text-lg bg-white/70 hover:bg-white/50 hover:scale-105 transition-all backdrop-blur-lg text-center"
         >
           {e.title}
         </Link>

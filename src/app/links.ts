@@ -3,10 +3,10 @@ const links = [
     title: "Home",
     url: "/",
   },
-  {
-    title: "Media",
-    url: "/media",
-  },
+  // {
+  //   title: "Media",
+  //   url: "/media",
+  // },
   {
     title: "The Fleet",
     url: "/fleet",

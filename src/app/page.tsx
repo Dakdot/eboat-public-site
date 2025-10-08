@@ -6,8 +6,20 @@ export default function Home() {
   return (
     <div className="flex flex-col items-center">
       <div className="w-full">
-        <div className="w-full h-[390px] md:h-[400px] pt-[70px] md:pt-[130px] bg-gradient-to-b to-[#a32638] from-[#7d1524] relative">
-          <div className="flex flex-col gap-4 items-center">
+        <div>
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            className="relative -z-20 object-cover w-full h-[500px] md:h-[900px]"
+          >
+            <source src="/landing-1.mp4" type="video/mp4" />
+            <source src="/landing.webm" type="video/webm" />
+            Uh-oh! Your browser does not support the video tag.
+          </video>
+          <div className="absolute top-[100px] md:top-[200px] right-0 left-0 flex flex-col items-center gap-6">
             <div className="flex flex-col md:flex-row items-center gap-2">
               <img
                 src={"/eboat-logo-red.png"}
@@ -27,39 +39,6 @@ export default function Home() {
             <HomeLinks />
           </div>
         </div>
-        <svg
-          className="w-full h-12 pointer-events-none absolute left-0 top-[390px] md:top-[400px]"
-          viewBox="0 0 100 20"
-          preserveAspectRatio="none"
-          style={{ zIndex: -10 }}
-        >
-          <polygon
-            points="0,0 100,0 100,4 50,16 0,4"
-            fill="black"
-            opacity="0.5"
-            filter="blur(2px)"
-          />
-
-          <polygon points="0,0 100,0 50,12" fill="#a32638" />
-        </svg>
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="metadata"
-          className="relative -z-20 object-cover w-full h-[500px] md:h-[900px]"
-        >
-          <source src="/landing-1.mp4" type="video/mp4" />
-          <source src="/landing.webm" type="video/webm" />
-          Uh-oh! Your browser does not support the video tag.
-        </video>
-        {/* <img
-          src={"/landing-1.jpg"}
-          className="relative -z-20 object-cover w-full h-[400px] md:h-[700px]"
-          style={{ objectPosition: "center bottom" }}
-          alt="Electric boat on the water"
-        /> */}
         <svg
           className="w-full h-12 -translate-y-12"
           style={{ pointerEvents: "none", position: "absolute", left: 0 }}
@@ -123,7 +102,7 @@ export default function Home() {
               </p>
               <Link
                 className="underline decoration-dotted hover:decoration-solid"
-                href={"/fleet"}
+                href={"/about"}
               >
                 Meet the team
               </Link>
@@ -151,10 +130,36 @@ export default function Home() {
           <polygon points="0,0 100,0 50,12" fill="#fafaf9" />
         </svg>
 
-        <div className="flex flex-col pt-20 pb-16 items-center md:text-lg">
+        <div className="flex flex-col gap-8 pt-20 pb-16 items-center md:text-lg ">
           <h2 className="text-2xl md:text-4xl font-inter">Our Supporters</h2>
+          <div className="flex gap-12 items-center">
+            <a
+              href="https://navalengineers.org"
+              rel="noopener noreferrer"
+              target="_"
+              className="grayscale hover:grayscale-0 transition-all"
+            >
+              <img
+                src={"/support/plat-1.png"}
+                width={100}
+                alt="American Society of Naval Engineers logo"
+              />
+            </a>
+            <a
+              href="https://www.dhxelectricmachines.com/"
+              rel="noopener noreferrer"
+              target="_"
+              className="link grayscale hover:grayscale-0 transition-all"
+            >
+              <img
+                src={"/support/silver-1.png"}
+                width={100}
+                alt="DHX Electric Machines logo"
+              />
+            </a>
+          </div>
           <Link
-            href={"/support-us"}
+            href={"/support-us#become-a-sponsor"}
             className="underline decoration-dotted hover:decoration-solid"
           >
             Learn how to support us
@@ -173,10 +178,10 @@ export default function Home() {
             filter="blur(2px)"
           />
 
-          <polygon points="0,0 100,0 50,12" fill="#fafaf9" />
+          <polygon points="0,0 100,0 50,12" fill="#ffffff" />
         </svg>
 
-        <div className="flex flex-col pt-20 pb-16 items-center md:text-lg bg-gradient-to-b from-[#f0e3ce] to-[#fff2d7]">
+        <div className="flex flex-col pt-20 pb-16 items-center md:text-lg text-white bg-gradient-to-b to-[#a32638] from-[#7d1524]">
           <h2 className="text-2xl md:text-4xl font-inter">Get Involved</h2>
           <Link
             href={"/support-us"}
@@ -185,6 +190,21 @@ export default function Home() {
             Learn how to join us
           </Link>
         </div>
+        <svg
+          className="w-full h-12 pointer-events-none -mb-12"
+          viewBox="0 0 100 20"
+          preserveAspectRatio="none"
+          style={{ zIndex: 10 }}
+        >
+          <polygon
+            points="0,0 100,0 100,4 50,16 0,4"
+            fill="black"
+            opacity="0.3"
+            filter="blur(2px)"
+          />
+
+          <polygon points="0,0 100,0 50,12" fill="#a32638" />
+        </svg>
       </div>
     </div>
   );

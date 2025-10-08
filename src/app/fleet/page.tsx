@@ -25,7 +25,7 @@ export default function FleetPage() {
         </h1>
       </div>
 
-      <div className="flex flex-col gap-12 items-center bg-gradient-to-b to-[#a32638] from-[#7d1524] pt-12 pb-12 text-white">
+      <div className="flex flex-col gap-12 items-center text-white bg-gradient-to-b to-[#a32638] from-[#7d1524] pt-12 pb-12">
         <h2>Stevens Electric Boatworks currently has two major projects:</h2>
         <div className="flex gap-6 w-3xl">
           <img
@@ -36,12 +36,14 @@ export default function FleetPage() {
           />
           <div className="flex flex-col justify-center gap-2">
             <div>
-              <h4 className="text-white/75">Manned Vessel</h4>
-              <h3 className="text-4xl font-bold font-inter">Lightning</h3>
+              <h4 className="text-white/75">Monitored Manned Vessel</h4>
+              <h3 className="text-4xl font-bold font-inter">
+                &quot;Boat&quot;
+              </h3>
             </div>
             <p>
-              Lightning is a fully electric planing speedboat engineered for
-              spirited on‑water performance and refined day cruising. Its
+              &quot;Boat&quot; is a fully electric planing speedboat engineered
+              for spirited on‑water performance and refined day cruising. Its
               lightweight planing hull combined with a high‑power electric drive
               delivers instant torque, rapid acceleration and an efficient,
               quiet high‑speed glide.

@@ -85,7 +85,140 @@ export default function AboutPage() {
         <h2 className="font-bold font-inter text-4xl" id="team">
           The Team
         </h2>
-        <div className="max-w-3xl space-y-4"></div>
+        <div className="max-w-3xl space-y-8 md:space-y-12">
+          <div className="flex items-center gap-6">
+            <img
+              src={"/placeholder-1.jpg"}
+              width={100}
+              className="rounded-full"
+              alt="Placeholder"
+            />
+            <div>
+              <h3 className="font-inter font-bold text-2xl">Drivetrain</h3>
+              <p>
+                This team works to build the most efficient and most powerful
+                electric drivetrain possible.
+              </p>
+            </div>
+          </div>
+          <div className="flex items-center gap-6">
+            <img
+              src={"/placeholder-1.jpg"}
+              width={100}
+              className="rounded-full"
+              alt="Placeholder"
+            />
+            <div>
+              <h3 className="font-inter font-bold text-2xl">Cooling</h3>
+              <p>
+                Our cooling team specializes in keeping cool the motors,
+                controllers, and batteries.
+              </p>
+            </div>
+          </div>
+          <div className="flex items-center gap-6">
+            <img
+              src={"/placeholder-1.jpg"}
+              width={100}
+              className="rounded-full"
+              alt="Placeholder"
+            />
+            <div>
+              <h3 className="font-inter font-bold text-2xl">Batteries</h3>
+              <p>
+                Our battery team helps us provide a huge amount of power in a
+                very short amount of time, all while keeping the weight
+                impressively low.
+              </p>
+            </div>
+          </div>
+          <div className="flex items-center gap-6">
+            <img
+              src={"/placeholder-1.jpg"}
+              width={100}
+              className="rounded-full"
+              alt="Placeholder"
+            />
+            <div>
+              <h3 className="font-inter font-bold text-2xl">
+                Computer-Aided Design
+              </h3>
+              <p>
+                The CAD team creates and maintains a full Solidworks model of
+                both vessels, ensuring smooth system integration.
+              </p>
+            </div>
+          </div>
+          <div className="flex items-center gap-6">
+            <img
+              src={"/placeholder-1.jpg"}
+              width={100}
+              className="rounded-full"
+              alt="Placeholder"
+            />
+            <div>
+              <h3 className="font-inter font-bold text-2xl">Control Systems</h3>
+              <p>
+                The Control Systems team develops the real-time software and
+                analytics that interpret telemetry from the manned vessel,
+                implement control algorithms, and present concise, actionable
+                information to the driver and shore crew.
+              </p>
+            </div>
+          </div>
+          <div className="flex items-center gap-6">
+            <img
+              src={"/placeholder-1.jpg"}
+              width={100}
+              className="rounded-full"
+              alt="Placeholder"
+            />
+            <div>
+              <h3 className="font-inter font-bold text-2xl">Unmanned</h3>
+              <p>
+                The unmanned team is designing and building a new boat from
+                scratch, ready to blow the competition out of the water,
+                completely autonomously.
+              </p>
+            </div>
+          </div>
+          <div className="flex items-center gap-6">
+            <img
+              src={"/placeholder-1.jpg"}
+              width={100}
+              className="rounded-full"
+              alt="Placeholder"
+            />
+            <div>
+              <h3 className="font-inter font-bold text-2xl">
+                Research & Development
+              </h3>
+              <p>
+                The R&D team takes on the challenge of understanding the
+                theoretical and takes charge of the future of our program. They
+                are in charge of the Naval Architecture projects of our current
+                and future vessels.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <svg
+        className="w-full h-12 pointer-events-none"
+        viewBox="0 0 100 20"
+        preserveAspectRatio="none"
+      >
+        <polygon
+          points="0,0 100,0 100,4 50,16 0,4"
+          fill="black"
+          opacity="0.5"
+          filter="blur(2px)"
+        />
+
+        <polygon points="0,0 100,0 50,12" fill="#57534d" />
+      </svg>
+      <div className="-pt-20 pb-16">
+        <h2>Our History</h2>
       </div>
     </div>
   );
