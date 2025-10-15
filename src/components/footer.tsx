@@ -7,7 +7,7 @@ export const Footer = () => {
       <div className="flex md:flex-row flex-col gap-6">
         <div className="flex-2">
           <p className="font-bold">Stevens Electric Boatworks</p>
-          <p>
+          <p className="text-sm">
             Part of{" "}
             <a
               href={"https://stevens.edu"}
@@ -16,10 +16,11 @@ export const Footer = () => {
               className="underline decoration-dotted hover:decoration-solid"
             >
               Stevens Institute of Technology
-            </a>{" "}
+            </a>
+            {", "}
             Charles V. Schaeffer School of Engineering
           </p>
-          <p>© 2025 Stevens Electric Boatworks.</p>
+          <p className="text-sm">© 2025 Stevens Electric Boatworks.</p>
         </div>
         <div className="flex-1">
           <p className="font-bold">About</p>
