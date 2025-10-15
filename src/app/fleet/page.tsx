@@ -49,7 +49,7 @@ export default function FleetPage() {
           />
           <div className="flex flex-col justify-center gap-2">
             <div>
-              <h4 className="text-white/75">Monitored Manned Vessel</h4>
+              <h4 className="text-white/75">Manned Vessel</h4>
               <h3 className="text-4xl font-bold font-inter">
                 &quot;Boat&quot;
               </h3>
@@ -76,7 +76,11 @@ export default function FleetPage() {
                 Unmanned Autonomous Vessel
               </h3>
             </div>
-            <p>Little boat description.</p>
+            <p>
+              The unmanned vessel is still being constructed and is currently
+              undergoing assembly and testing. We are actively refining the
+              design and will post progress updates soon.
+            </p>
             <Dialog>
               <DialogTrigger asChild>
                 <p className="link hover:cursor-pointer">
@@ -109,10 +113,10 @@ export default function FleetPage() {
             </Link> */}
           </div>
           <img
-            src={"/placeholder-1.jpg"}
-            className="rounded-full ml-auto"
+            src={"/fleet/unmanned-temp-1.jpg"}
+            className="rounded-full ml-auto aspect-square"
             width={250}
-            alt=""
+            alt="Computer rendering of unmanned vessel"
           />
         </div>
       </div>

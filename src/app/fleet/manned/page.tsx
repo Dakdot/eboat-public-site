@@ -19,7 +19,7 @@ export default function MannedAboutPage() {
           </svg>
         </div>
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white font-sans text-shadow-md">
-          <h2 className="text-lg text-white/75">Monitored Manned Vessel</h2>
+          <h2 className="text-lg text-white/75">Manned Vessel</h2>
           <h1 className="font-bold text-6xl ">&quot;Boat&quot;</h1>
         </div>
       </div>
