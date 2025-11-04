@@ -47,6 +47,7 @@ export default function Home() {
         >
           <polygon points="0,0 50,12 100,0 100,12 0,12" fill="#44403b" />
         </svg>
+
         <div className="flex flex-col py-16 text-white bg-gradient-to-b from-stone-700 to-stone-600 w-full relative items-center">
           <div className="flex gap-6 items-center flex-col md:flex-row px-4">
             <img
@@ -128,6 +129,49 @@ export default function Home() {
           />
 
           <polygon points="0,0 100,0 50,12" fill="#fafaf9" />
+        </svg>
+        {/* PEP highlight */}
+        <div className="flex flex-col gap-4 pt-20 pb-8 items-center md:text-lg px-4 bg-gradient-to-b from-stone-700 to-stone-600 text-white">
+          <span className="relative rounded-full px-6 py-3">
+            <span className="absolute inset-0 flex items-center justify-center text-4xl md:text-6xl font-extrabold font-sans bg-gradient-to-r from-[#fde68a] to-[#f59e0b] bg-clip-text text-transparent filter blur-2xl opacity-70 animate-pulse pointer-events-none">
+              First Place
+            </span>
+            <span className="relative z-10 flex items-center justify-center text-4xl md:text-6xl font-extrabold font-sans bg-gradient-to-r from-[#fde68a] to-[#f59e0b] bg-clip-text text-transparent">
+              First Place
+            </span>
+          </span>
+          <span className="text-sm text-white/70">PEP Competition</span>
+          <h2 className="text-2xl md:text-4xl font-inter text-center ">
+            2025 PEP Planing Division
+          </h2>
+          <p className="text-white/70 text-center max-w-2xl">
+            We placed first in the 2025 PEP Planing Division.
+          </p>
+          <a
+            href={"https://www.navalengineers.org/PEP25"}
+            className="link text-white/75"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Learn more
+          </a>
+        </div>
+
+        {/* bottom chevron for PEP section */}
+        <svg
+          className="w-full h-12 pointer-events-none absolute left-0 "
+          viewBox="0 0 100 20"
+          preserveAspectRatio="none"
+          style={{ zIndex: 10 }}
+        >
+          <polygon
+            points="0,0 100,0 100,4 50,16 0,4"
+            fill="black"
+            opacity="0.3"
+            filter="blur(2px)"
+          />
+
+          <polygon points="0,0 100,0 50,12" fill="#57534d" />
         </svg>
 
         <div className="flex flex-col gap-8 pt-20 pb-16 items-center md:text-lg ">
