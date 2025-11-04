@@ -140,13 +140,12 @@ export default function Home() {
               First Place
             </span>
           </span>
-          <span className="text-sm text-white/70">PEP Competition</span>
+          <span className="text-sm text-white/70">
+            ASNE&apos;s Promoting Electric Propulsion National Competition
+          </span>
           <h2 className="text-2xl md:text-4xl font-inter text-center ">
-            2025 PEP Planing Division
+            2025 Planing Division
           </h2>
-          <p className="text-white/70 text-center max-w-2xl">
-            We placed first in the 2025 PEP Planing Division.
-          </p>
           <a
             href={"https://www.navalengineers.org/PEP25"}
             className="link text-white/75"
