@@ -1,3 +1,4 @@
+import { SupporterLink } from "@/components/supporter-link";
 import Link from "next/link";
 
 export default function SupportUsPage() {
@@ -26,72 +27,46 @@ export default function SupportUsPage() {
       <div className="flex flex-col gap-12 items-center bg-gradient-to-b text-white from-stone-700 to-stone-600 pt-12 pb-12 px-4 text-lg">
         <div className="max-w-3xl flex flex-col gap-12 items-center">
           <h2 className="font-bold font-sans text-4xl">Our Sponsors</h2>
-          <div className="flex flex-col gap-6 items-center">
+          <div className="flex flex-col gap-6 items-center w-full">
             <h2 className="font-sans font-light text-3xl">
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#d9e0e5] to-[#afbdc6] font-extrabold">
                 Platinum
               </span>{" "}
               Sponsors
             </h2>
-            <a
+            <SupporterLink
               href="https://navalengineers.org"
-              rel="noopener noreferrer"
-              target="_"
-              className="link grayscale hover:grayscale-0 transition-all"
+              icon="/support/plat-1.png"
             >
-              <div className="flex items-center gap-4">
-                <img
-                  src={"/support/plat-1.png"}
-                  width={100}
-                  alt="American Society of Naval Engineers logo"
-                />
-                American Society of Naval Engineers
-              </div>
-            </a>
+              American Society of Naval Engineers
+            </SupporterLink>
           </div>
-          <div className="flex flex-col gap-6 items-center">
+          <div className="flex flex-col gap-6 items-center w-full">
             <h2 className="font-sans font-light text-3xl">
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#fde68a]  to-[#f59e0b] font-extrabold">
                 Gold
               </span>{" "}
               Sponsors
             </h2>
-            <a
-              href="https://sname.org/"
-              rel="noopener noreferrer"
-              target="_"
-              className="link grayscale hover:grayscale-0 transition-all"
-            >
-              <div className="flex items-center gap-4">
-                <img src={"/support/gold-1.png"} width={100} alt="SNAME logo" />
-                Society of Naval Architects and Marine Engineers;
-                <br />
-                SIT Student Chapter
-              </div>
-            </a>
+            <SupporterLink href="https://sname.org" icon="/support/gold-1.png">
+              Society of Naval Architects and Marine Engineers;
+              <br />
+              SIT Student Chapter
+            </SupporterLink>
           </div>
-          <div className="flex flex-col gap-6 items-center">
+          <div className="flex flex-col gap-6 items-center w-full">
             <h2 className="font-sans font-light text-3xl">
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#9f9b9b] via-[#a3a3a3] to-[#e5e5e5] font-extrabold">
                 Silver
               </span>{" "}
               Sponsors
             </h2>
-            <a
+            <SupporterLink
               href="https://www.dhxelectricmachines.com/"
-              rel="noopener noreferrer"
-              target="_"
-              className="link grayscale hover:grayscale-0 transition-all"
+              icon="/support/silver-1.png"
             >
-              <div className="flex items-center gap-4">
-                <img
-                  src={"/support/silver-1.png"}
-                  width={100}
-                  alt="DHX Electric Machines logo"
-                />
-                DHX Electric Machines
-              </div>
-            </a>
+              DHX Electric Machines
+            </SupporterLink>
           </div>
         </div>
       </div>
