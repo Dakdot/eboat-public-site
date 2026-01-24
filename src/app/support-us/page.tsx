@@ -1,4 +1,5 @@
 import { SupporterLink } from "@/components/supporter-link";
+import { Handshake } from "lucide-react";
 import Link from "next/link";
 
 export default function SupportUsPage() {
@@ -37,8 +38,15 @@ export default function SupportUsPage() {
             <SupporterLink
               href="https://navalengineers.org"
               icon="/support/plat-1.png"
+              iconAlt="American Society of Naval Engineers logo"
             >
               American Society of Naval Engineers
+            </SupporterLink>
+            <SupporterLink>
+              <div className="flex justify-center mb-4">
+                <Handshake className="w-16 h-16 text-stone-400" />
+              </div>
+              Private Sponsor
             </SupporterLink>
           </div>
           <div className="flex flex-col gap-6 items-center w-full">
