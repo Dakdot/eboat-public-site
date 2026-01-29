@@ -24,10 +24,11 @@ export default function ModelViewerDemo() {
               scale={1}
               position={[0, 0, 0]}
               cameraPosition={[0, 2, 5]}
-              enableZoom={true}
-              enableRotate={true}
-              enablePan={true}
+              enableZoom
+              enableRotate
+              enablePan
               backgroundColor="#f5f5f4"
+              ariaLabel="Example 3D cube model"
             />
           </div>
         </div>
@@ -51,10 +52,11 @@ export default function ModelViewerDemo() {
   scale={1}
   position={[0, 0, 0]}
   cameraPosition={[0, 2, 5]}
-  enableZoom={true}
-  enableRotate={true}
-  enablePan={true}
+  enableZoom
+  enableRotate
+  enablePan
   backgroundColor="#f5f5f4"
+  ariaLabel="Your 3D model description"
 />`}
           </pre>
         </div>
