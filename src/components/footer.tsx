@@ -20,7 +20,7 @@ export const Footer = () => {
             {", "}
             Charles V. Schaeffer School of Engineering
           </p>
-          <p className="text-sm">© 2025 Stevens Electric Boatworks.</p>
+          <p className="text-sm">© 2025-2026 Stevens Electric Boatworks.</p>
         </div>
         <div className="flex-1">
           <p className="font-bold">About</p>
