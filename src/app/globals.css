@@ -143,6 +143,10 @@
   .font-roboto {
     font-family: var(--font-roboto);
   }
+
+  .font-seven-segment {
+    font-family: var(--font-seven-segment);
+  }
 }
 
 html {

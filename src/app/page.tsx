@@ -1,4 +1,7 @@
+import { CountdownTimer } from "@/components/countdown-timer";
 import { HomeLinks } from "@/components/home-links";
+import { SiInstagram } from "@icons-pack/react-simple-icons";
+import { InstagramIcon } from "lucide-react";
 
 import Link from "next/link";
 
@@ -47,7 +50,24 @@ export default function Home() {
         >
           <polygon points="0,0 50,12 100,0 100,12 0,12" fill="#44403b" />
         </svg>
-
+        <div className="flex flex-col items-center px-4 bg-stone-700 border-b border-white/20 text-white">
+          <div className="my-12">
+            <p className="font-sans font-medium text-3xl md:text-5xl">
+              Competition is <b>coming</b>.
+            </p>
+          </div>
+          <CountdownTimer to={new Date("April 15, 2026 8:00 AM EST")} />
+          <div className="my-12">
+            <a
+              className="flex gap-4 border p-4 rounded-full bg-white text-black font-bold hover:scale-105 transition-all shadow-xl"
+              href={"https://www.instagram.com/stevenseboat/"}
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <SiInstagram /> Follow the journey on Instagram
+            </a>
+          </div>
+        </div>
         <div className="flex flex-col py-16 text-white bg-gradient-to-b from-stone-700 to-stone-600 w-full relative items-center">
           <div className="flex gap-6 items-center flex-col md:flex-row px-4">
             <img

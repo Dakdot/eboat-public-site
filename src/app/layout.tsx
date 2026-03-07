@@ -11,6 +11,7 @@ import "./globals.css";
 import { NavBar } from "@/components/nav-bar";
 import { Footer } from "@/components/footer";
 import Script from "next/script";
+import localFont from "next/font/local";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -43,6 +44,11 @@ const pt_serif = PT_Serif({
   weight: ["400", "700"],
 });
 
+const seven_segment = localFont({
+  src: "./fonts/seven-segment.woff2",
+  variable: "--font-seven-segment",
+});
+
 export const metadata: Metadata = {
   title: "Stevens Electric Boatworks",
 };
@@ -55,7 +61,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${pt_serif.variable} ${fira_code.variable} ${fira_sans.variable} ${roboto.variable} antialiased`}
+      className={`${inter.variable} ${pt_serif.variable} ${fira_code.variable} ${fira_sans.variable} ${roboto.variable} ${seven_segment.variable} antialiased`}
     >
       <Script
         src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"
