@@ -10,6 +10,7 @@ import {
 import "./globals.css";
 import { NavBar } from "@/components/nav-bar";
 import { Footer } from "@/components/footer";
+import Script from "next/script";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -56,6 +57,10 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${pt_serif.variable} ${fira_code.variable} ${fira_sans.variable} ${roboto.variable} antialiased`}
     >
+      <Script
+        src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"
+        type="module"
+      />
       <meta name="apple-mobile-web-app-title" content="SIT E-Boat" />
       <body>
         <NavBar />

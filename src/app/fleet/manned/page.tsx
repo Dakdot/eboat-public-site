@@ -1,4 +1,11 @@
-export default function MannedAboutPage() {
+import { ModelViewer } from "@/components/model-viewer";
+import { headers } from "next/headers";
+
+export default async function MannedAboutPage() {
+  const headersList = await headers();
+  const userAgent = headersList.get("user-agent") ?? "";
+  const isMobile = /Mobile|Android|iPhone|iPad/i.test(userAgent);
+
   return (
     <div>
       <div className="relative">
@@ -40,19 +47,47 @@ export default function MannedAboutPage() {
           />
         </div>
       </div>
+      <div className="h-[700px] bg-gradient-to-b from-stone-700 to-stone-600 text-white relative overflow-hidden">
+        {/* Model viewer shifted right so its center = center of free space */}
+        <div className="md:w-[130%] absolute md:top-0 md:bottom-0 left-0 right-0 top-0 not-md:h-[130%]">
+          <model-viewer
+            className="w-full h-full"
+            src={"/models/boat-opt.glb"}
+            camera-controls
+            autoplay
+            ar
+            ar-scale="fixed"
+            xr-environment
+          ></model-viewer>
+        </div>
+
+        <div className="flex-1 flex flex-col justify-center gap-4 md:gap-8 p-8 border-b md:border-r border-white/20 bg-black/20 absolute top-0 left-0 md:bottom-0 right-0 backdrop-blur-lg  md:w-[30%]">
+          <h2 className="font-sans font-bold text-2xl md:text-4xl">
+            Explore &quot;Boat&quot; For Yourself
+          </h2>
+          <p className="md:text-lg">
+            Pan and zoom around the model to get a more detailed look at
+            &quot;Boat&quot;.
+          </p>
+          <p className="text-sm text-white/70">
+            <b>Controls</b>
+            <br />
+            {isMobile
+              ? "Drag with one finger to orbit. Use two fingers to pan or zoom."
+              : "Click and drag to orbit. Scroll to zoom. Hold shift while dragging to pan."}
+          </p>
+        </div>
+
+        {/* Left overlay - fixed width so we know exactly how much to offset */}
+      </div>
+
       <svg
-        className="w-full h-12 pointer-events-none -mb-12"
-        viewBox="0 0 100 20"
+        className="w-full h-12 -translate-y-12"
+        style={{ pointerEvents: "none", position: "absolute", left: 0 }}
+        viewBox="0 0 100 12"
         preserveAspectRatio="none"
       >
-        <polygon
-          points="0,0 100,0 100,4 50,16 0,4"
-          fill="black"
-          opacity="0.5"
-          filter="blur(2px)"
-        />
-
-        <polygon points="0,0 100,0 50,12" fill="#a32638" />
+        <polygon points="0,0 50,12 100,0 100,12 0,12" fill="#d6d3d1" />
       </svg>
       <div className="flex flex-col items-center py-16  bg-gradient-to-b to-stone-50 from-stone-300">
         <div className="flex flex-col max-w-3xl gap-8 text-lg px-4">
