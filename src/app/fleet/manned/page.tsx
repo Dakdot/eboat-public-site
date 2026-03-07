@@ -1,4 +1,3 @@
-import { ModelViewer } from "@/components/model-viewer";
 import { headers } from "next/headers";
 
 export default async function MannedAboutPage() {
