@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const Footer = () => {
   return (
-    <div className="flex flex-col gap-6 items-center py-20 bg-stone-300 px-4">
+    <div className="flex flex-col gap-6 items-center py-20 bg-stone-700 text-white px-4">
       <div className="flex md:flex-row flex-col gap-6">
         <div className="flex-2">
           <p className="font-bold">Stevens Electric Boatworks</p>

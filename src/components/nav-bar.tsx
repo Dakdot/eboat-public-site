@@ -5,7 +5,7 @@ import links from "@/app/links";
 export const NavBar = () => {
   return (
     <div
-      className={`flex bg-neutral-800/50 text-sm sm:text-base  text-white items-center px-2 md:px-4 gap-4 md:gap-6 fixed w-full h-14 md:h-12 backdrop-blur-lg shadow text-center z-50`}
+      className={`flex bg-stone-700 text-sm sm:text-base  text-white items-center justify-center px-2 md:px-4 gap-4 md:gap-6  w-full h-14 md:h-12 shadow-xl text-center z-50 border-b border-white/20`}
       id="navbar"
     >
       <Link href={"/"}>
@@ -21,7 +21,7 @@ export const NavBar = () => {
         </div>
       </Link>
 
-      <div className="flex md:flex-1 justify-evenly md:justify-end items-center gap-6">
+      <div className="flex md:ml-auto items-center justify-center gap-6">
         {links.map((e, idx) => (
           <Link
             key={idx}

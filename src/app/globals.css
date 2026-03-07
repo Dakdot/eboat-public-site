@@ -153,10 +153,18 @@ html {
   font-family: var(--font-pt-serif);
 }
 
+body {
+  background: transparent;
+}
+
 .link {
   text-decoration: underline dotted;
 }
 
 .link:hover {
   text-decoration: underline solid;
+}
+
+main {
+  padding-top: env(safe-area-inset-top);
 }

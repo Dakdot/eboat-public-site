@@ -193,7 +193,7 @@ export default function Home() {
           <polygon points="0,0 100,0 50,12" fill="#57534d" />
         </svg>
 
-        <div className="flex flex-col gap-8 pt-20 pb-16 items-center md:text-lg ">
+        <div className="flex flex-col gap-8 pt-20 pb-16 items-center md:text-lg bg-white ">
           <h2 className="text-2xl md:text-4xl font-inter">Our Supporters</h2>
           <div className="flex gap-12 items-center overflow-x-auto px-4">
             <a

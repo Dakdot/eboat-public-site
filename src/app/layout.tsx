@@ -53,6 +53,12 @@ export const metadata: Metadata = {
   title: "Stevens Electric Boatworks",
 };
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -61,7 +67,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${pt_serif.variable} ${fira_code.variable} ${fira_sans.variable} ${roboto.variable} ${seven_segment.variable} antialiased`}
+      className={`${inter.variable} ${pt_serif.variable} ${fira_code.variable} ${fira_sans.variable} ${roboto.variable} ${seven_segment.variable} bg-stone-700 antialiased`}
     >
       <Script
         src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"
@@ -70,10 +76,10 @@ export default function RootLayout({
       <meta name="apple-mobile-web-app-title" content="SIT E-Boat" />
       <body>
         <NavBar />
-        <div className="min-h-screen  ">
+        <main>
           {children}
           <Footer />
-        </div>
+        </main>
       </body>
     </html>
   );
