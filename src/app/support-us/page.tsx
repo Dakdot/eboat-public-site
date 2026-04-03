@@ -35,19 +35,28 @@ export default function SupportUsPage() {
               </span>{" "}
               Sponsors
             </h2>
-            <SupporterLink
-              href="https://navalengineers.org"
-              icon="/support/plat-1.png"
-              iconAlt="American Society of Naval Engineers logo"
-            >
-              American Society of Naval Engineers
-            </SupporterLink>
-            <SupporterLink>
-              <div className="flex justify-center mb-4">
-                <Handshake className="w-16 h-16 text-stone-400" />
-              </div>
-              Private Sponsor
-            </SupporterLink>
+            <div className="grid grid-cols-2 gap-6 w-full">
+              <SupporterLink
+                href="https://navalengineers.org"
+                icon="/support/logo-asne.png"
+                iconAlt="American Society of Naval Engineers logo"
+              >
+                American Society of Naval Engineers
+              </SupporterLink>
+              <SupporterLink
+                href="https://sname.org"
+                icon="/support/logo-sname.png"
+              >
+                Society of Naval Architects and Marine Engineers; SIT Student
+                Chapter
+              </SupporterLink>
+              <SupporterLink
+                href="https://www.dhxelectricmachines.com/"
+                icon="/support/logo-mk.png"
+              >
+                Motive Kinetics
+              </SupporterLink>
+            </div>
           </div>
           <div className="flex flex-col gap-6 items-center w-full">
             <h2 className="font-sans font-light text-3xl">
@@ -56,11 +65,20 @@ export default function SupportUsPage() {
               </span>{" "}
               Sponsors
             </h2>
-            <SupporterLink href="https://sname.org" icon="/support/gold-1.png">
-              Society of Naval Architects and Marine Engineers;
-              <br />
-              SIT Student Chapter
-            </SupporterLink>
+            <div className="grid grid-cols-2 gap-6 w-full">
+              <SupporterLink
+                href="https://www.ghaasfoundation.org/"
+                icon="/support/logo-ghf.png"
+              >
+                Gene Haas Foundation
+              </SupporterLink>
+              <SupporterLink>
+                <div className="flex justify-center mb-4">
+                  <Handshake className="w-16 h-16 text-stone-400" />
+                </div>
+                Private Sponsor
+              </SupporterLink>
+            </div>
           </div>
           <div className="flex flex-col gap-6 items-center w-full">
             <h2 className="font-sans font-light text-3xl">
@@ -69,12 +87,48 @@ export default function SupportUsPage() {
               </span>{" "}
               Sponsors
             </h2>
-            <SupporterLink
-              href="https://www.dhxelectricmachines.com/"
-              icon="/support/silver-1.png"
-            >
-              DHX Electric Machines
-            </SupporterLink>
+            <div className="grid grid-cols-2 gap-6 w-full">
+              <SupporterLink
+                href="https://www.stevens.edu/school-engineering-science"
+                icon="/support/logo-ses.png"
+              >
+                Charles V. Schaefer, Jr. School of Engineering and Science
+              </SupporterLink>
+              <SupporterLink
+                href="https://evs-inmotion.com/en/"
+                icon="/support/logo-inmotion.svg"
+              >
+                Inmotion
+              </SupporterLink>
+            </div>
+          </div>
+          <div className="flex flex-col gap-6 items-center w-full">
+            <h2 className="font-sans font-light text-3xl">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#9f9b9b] via-[#a3a3a3] to-[#e5e5e5] font-extrabold">
+                Bronze
+              </span>{" "}
+              Sponsors
+            </h2>
+            <div className="grid grid-cols-2 gap-6 w-full">
+              <SupporterLink
+                href="https://www.ryc.org/"
+                icon="/support/logo-ryc.png"
+              >
+                Raritan Yacht Club
+              </SupporterLink>
+              <SupporterLink
+                href="https://www.bbtalkin.com/"
+                icon="/support/logo-bbt.avif"
+              >
+                BBtalkin&apos;
+              </SupporterLink>
+              <SupporterLink
+                href="https://www.americanadditive.com/"
+                icon="/support/logo-aa.gif"
+              >
+                American Additive
+              </SupporterLink>
+            </div>
           </div>
         </div>
       </div>

@@ -1,0 +1,70 @@
+[
+  {
+    "tier": "platinum",
+    "supporters": [
+      {
+        "name": "American Society of Naval Engineers",
+        "icon": "/support/logo-asne.png",
+        "href": "https://navalengineers.org"
+      },
+      {
+        "name": "Society of Naval Architects and Marine Engineers; SIT Student Chapter",
+        "icon": "/support/logo-sname.png",
+        "href": "https://sname.org"
+      },
+      {
+        "name": "Motive Kinetics",
+        "icon": "/support/logo-mk.png",
+        "href": "https://www.dhxelectricmachines.com/"
+      }
+    ]
+  },
+  {
+    "tier": "gold",
+    "supporters": [
+      {
+        "name": "Gene Haas Foundation",
+        "icon": "/support/logo-ghf.png",
+        "href": "https://www.ghaasfoundation.org/"
+      },
+      {
+        "name": "Private Sponsor"
+      }
+    ]
+  },
+  {
+    "tier": "silver",
+    "supporters": [
+      {
+        "name": "Charles V. Schaefer, Jr. School of Engineering and Science",
+        "icon": "/support/logo-ses.png",
+        "href": "https://www.stevens.edu/school-engineering-science"
+      },
+      {
+        "name": "Inmotion",
+        "icon": "/support/logo-inmotion.svg",
+        "href": "https://evs-inmotion.com/en/"
+      }
+    ]
+  },
+  {
+    "tier": "bronze",
+    "supporters": [
+      {
+        "name": "Raritan Yacht Club",
+        "icon": "/support/logo-ryc.png",
+        "href": "https://www.ryc.org/"
+      },
+      {
+        "name": "BBtalkin'",
+        "icon": "/support/logo-bbt.avif",
+        "href": "https://www.bbtalkin.com/"
+      },
+      {
+        "name": "American Additive",
+        "icon": "/support/logo-aa.gif",
+        "href": "https://www.americanadditive.com/"
+      }
+    ]
+  }
+]

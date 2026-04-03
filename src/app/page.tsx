@@ -1,5 +1,6 @@
 import { CountdownTimer } from "@/components/countdown-timer";
 import { HomeLinks } from "@/components/home-links";
+import { SupporterCarousel } from "@/components/supporter-carousel";
 import { SiInstagram } from "@icons-pack/react-simple-icons";
 import { InstagramIcon } from "lucide-react";
 
@@ -68,7 +69,7 @@ export default function Home() {
             </a>
           </div>
         </div>
-        <div className="flex flex-col py-16 text-white bg-gradient-to-b from-stone-700 to-stone-600 w-full relative items-center">
+        <div className="flex flex-col py-16 bg-gradient-to-b from-stone-200 to-stone-50 w-full relative items-center">
           <div className="flex gap-6 items-center flex-col md:flex-row px-4">
             <img
               src={"/landing-2.jpg"}
@@ -76,8 +77,8 @@ export default function Home() {
               className="rounded-sm border shadow"
               alt="Electric boat on a trailer"
             />
-            <div className="lg:max-w-xl space-y-2 md:text-lg text-white/85">
-              <h2 className="text-2xl md:text-4xl font-inter text-white">
+            <div className="lg:max-w-xl space-y-2 md:text-lg text-black/85">
+              <h2 className="text-2xl md:text-4xl font-inter text-black">
                 Engineering the <b>future</b> of sustainable watercraft.
               </h2>
               <p>
@@ -108,7 +109,7 @@ export default function Home() {
             filter="blur(2px)"
           />
 
-          <polygon points="0,0 100,0 50,12" fill="#57534d" />
+          <polygon points="0,0 100,0 50,12" fill="#fafaf9" />
         </svg>
         <div className="flex flex-col pt-20 pb-16 bg-gradient-to-b from-stone-200 to-stone-50 w-full relative items-center">
           <div className="flex gap-6 items-center flex-col px-4 md:flex-row">
@@ -193,41 +194,10 @@ export default function Home() {
           <polygon points="0,0 100,0 50,12" fill="#57534d" />
         </svg>
 
-        <div className="flex flex-col gap-8 pt-20 pb-16 items-center md:text-lg bg-white ">
+        <div className="flex flex-col gap-8 pt-20 pb-16 items-center md:text-lg bg-gradient-to-b from-stone-700 to-stone-600 text-white">
           <h2 className="text-2xl md:text-4xl font-inter">Our Supporters</h2>
-          <div className="flex gap-12 items-center overflow-x-auto px-4">
-            <a
-              href="https://navalengineers.org"
-              rel="noopener noreferrer"
-              target="_"
-              className="grayscale hover:grayscale-0 transition-all"
-            >
-              <img
-                src={"/support/plat-1.png"}
-                width={100}
-                alt="American Society of Naval Engineers logo"
-              />
-            </a>
-            <a
-              href="https://sname.org/"
-              rel="noopener noreferrer"
-              target="_"
-              className="link grayscale hover:grayscale-0 transition-all"
-            >
-              <img src={"/support/gold-1.png"} width={100} alt="SNAME logo" />
-            </a>
-            <a
-              href="https://www.dhxelectricmachines.com/"
-              rel="noopener noreferrer"
-              target="_"
-              className="link grayscale hover:grayscale-0 transition-all"
-            >
-              <img
-                src={"/support/silver-1.png"}
-                width={100}
-                alt="DHX Electric Machines logo"
-              />
-            </a>
+          <div className="container">
+            <SupporterCarousel />
           </div>
           <Link
             href={"/support-us#become-a-sponsor"}
@@ -249,7 +219,7 @@ export default function Home() {
             filter="blur(2px)"
           />
 
-          <polygon points="0,0 100,0 50,12" fill="#ffffff" />
+          <polygon points="0,0 100,0 50,12" fill="#57534d" />
         </svg>
 
         {/* <div className="flex flex-col pt-20 pb-16 items-center md:text-lg text-white bg-gradient-to-b to-[#a32638] from-[#7d1524]">
