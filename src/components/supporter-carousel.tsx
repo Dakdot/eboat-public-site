@@ -6,7 +6,7 @@ export const SupporterCarousel = () => {
   const supporters = Supporters.flatMap((e) => e.supporters);
 
   return (
-    <div className="grid grid-cols-3 lg:grid-cols-5 gap-4 px-4">
+    <div className="grid grid-cols-3 lg:grid-cols-4 gap-4 px-4">
       {supporters.map((e, idx) => (
         <a
           key={idx}

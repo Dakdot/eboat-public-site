@@ -64,6 +64,11 @@
         "name": "American Additive",
         "icon": "/support/logo-aa.gif",
         "href": "https://www.americanadditive.com/"
+      },
+      {
+        "name": "Siemens",
+        "icon": "/support/logo-sie.png",
+        "href": "https://www.siemens.com/"
       }
     ]
   }

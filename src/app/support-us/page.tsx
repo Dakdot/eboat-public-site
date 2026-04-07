@@ -128,6 +128,12 @@ export default function SupportUsPage() {
               >
                 American Additive
               </SupporterLink>
+              <SupporterLink
+                href="https://www.siemens.com/"
+                icon="/support/logo-sie.png"
+              >
+                Siemens
+              </SupporterLink>
             </div>
           </div>
         </div>
