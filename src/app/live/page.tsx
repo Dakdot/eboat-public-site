@@ -68,7 +68,7 @@ export default function LivePage() {
       <div className="relative">
         <iframe
           className="w-full aspect-video"
-          src="https://www.youtube.com/embed/m3kR2KK8TEs?si=0X_vRl52hOGVvhaw&amp;controls=0"
+          src="https://www.youtube.com/embed/XLGrvznslYY?si=wEvvGrVsGG5BHoRt&amp;controls=0"
           title="YouTube video player"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerPolicy="strict-origin-when-cross-origin"
@@ -86,7 +86,8 @@ export default function LivePage() {
           <div className="flex flex-col items-center">
             <p className="text-sm">POWER</p>
             <p className="text-3xl px-4">
-              {data.get("speed")
+              {data.get("bms.pack_current_raw") &&
+              data.get("bms.pack_voltage_raw")
                 ? (
                     ((data.get("bms.pack_current_raw")?.value as number) *
                       (data.get("bms.pack_voltage_raw")?.value as number)) /
@@ -99,7 +100,7 @@ export default function LivePage() {
           <div className="flex flex-col items-center">
             <p className="text-sm">RPM</p>
             <p className="text-3xl px-4">
-              {data.get("speed")
+              {data.get("motors.rpm")
                 ? (data.get("motors.rpm")?.value as number).toFixed()
                 : "---"}{" "}
             </p>
@@ -119,7 +120,8 @@ export default function LivePage() {
         <div className="flex flex-col items-center">
           <p className="text-sm">POWER</p>
           <p className="text-3xl px-4">
-            {data.get("speed")
+            {data.get("bms.pack_current_raw") &&
+            data.get("bms.pack_voltage_raw")
               ? (
                   ((data.get("bms.pack_current_raw")?.value as number) *
                     (data.get("bms.pack_voltage_raw")?.value as number)) /
@@ -132,7 +134,7 @@ export default function LivePage() {
         <div className="flex flex-col items-center">
           <p className="text-sm">RPM</p>
           <p className="text-3xl px-4">
-            {data.get("speed")
+            {data.get("motors.rpm")
               ? (data.get("motors.rpm")?.value as number).toFixed()
               : "---"}{" "}
           </p>

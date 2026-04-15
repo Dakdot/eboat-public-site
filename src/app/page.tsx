@@ -61,7 +61,7 @@ export default function Home() {
               Competition is <b>coming</b>.
             </p>
           </div>
-          <CountdownTimer to={new Date("April 15, 2026 10:00 AM EST")} />
+          <CountdownTimer to={new Date("April 15, 2026 11:00 AM EST")} />
           <div className="my-12">
             <Link
               className="flex items-center gap-4 border p-4 px-6 rounded-full bg-white text-black text-2xl font-bold hover:scale-105 transition-all shadow-xl"
