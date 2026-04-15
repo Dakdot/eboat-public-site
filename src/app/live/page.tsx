@@ -75,8 +75,26 @@ export default function LivePage() {
         />
         <div className="flex gap-2 absolute top-0 right-0 text-white bg-black/25 p-2 backdrop-blur-lg rounded-bl-md border-b border-l border-white/25 font-sans">
           <div className="flex flex-col items-center">
-            <p className="font-light text-xs">SPEED</p>
-            <p className="text-xl">
+            <p className="text-sm">SPEED</p>
+            <p className="text-3xl">
+              {data.get("speed")
+                ? (data.get("speed")?.value as number).toFixed()
+                : "---"}{" "}
+              kt
+            </p>
+          </div>
+          <div className="flex flex-col items-center">
+            <p className="text-sm">POWER</p>
+            <p className="text-3xl">
+              {data.get("speed")
+                ? (data.get("speed")?.value as number).toFixed()
+                : "---"}{" "}
+              kt
+            </p>
+          </div>
+          <div className="flex flex-col items-center">
+            <p className="text-sm">RPM</p>
+            <p className="text-3xl">
               {data.get("speed")
                 ? (data.get("speed")?.value as number).toFixed()
                 : "---"}{" "}
