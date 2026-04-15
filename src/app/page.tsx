@@ -64,7 +64,7 @@ export default function Home() {
           <CountdownTimer to={new Date("April 15, 2026 10:00 AM EST")} />
           <div className="my-12">
             <Link
-              className="flex gap-4 border p-4 rounded-full bg-black text-white border-black/50 font-bold hover:scale-105 transition-all shadow-xl"
+              className="flex items-center gap-4 border p-4 px-6 rounded-full bg-white text-black text-2xl font-bold hover:scale-105 transition-all shadow-xl"
               href={"/live"}
               rel="noopener noreferrer"
               target="_blank"
@@ -74,7 +74,7 @@ export default function Home() {
           </div>
           <div className="mb-12 ">
             <a
-              className="flex gap-4 border p-4 rounded-full bg-white text-black font-bold hover:scale-105 transition-all shadow-xl"
+              className="flex gap-4 border p-4 rounded-full bg-black text-white border-black/50 font-bold hover:scale-105 transition-all shadow-xl"
               href={"https://www.instagram.com/stevenseboat/"}
               rel="noopener noreferrer"
               target="_blank"

@@ -73,7 +73,7 @@ export default function LivePage() {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerPolicy="strict-origin-when-cross-origin"
         />
-        <div className="flex gap-2 absolute top-0 right-0 text-white bg-black/25 p-2 backdrop-blur-lg rounded-bl-md border-b border-l border-white/25 font-sans">
+        <div className="not-md:hidden flex gap-2 absolute top-0 right-0 text-white bg-black/25 p-2 backdrop-blur-lg rounded-bl-md border-b border-l border-white/25 font-sans">
           <div className="flex flex-col items-center">
             <p className="text-sm">SPEED</p>
             <p className="text-3xl px-4">
@@ -104,6 +104,38 @@ export default function LivePage() {
                 : "---"}{" "}
             </p>
           </div>
+        </div>
+      </div>
+      <div className="md:hidden flex items-center justify-center gap-2 p-4 font-sans text-white">
+        <div className="flex flex-col items-center">
+          <p className="text-sm">SPEED</p>
+          <p className="text-3xl px-4">
+            {data.get("speed")
+              ? (data.get("speed")?.value as number).toFixed()
+              : "---"}{" "}
+            kt
+          </p>
+        </div>
+        <div className="flex flex-col items-center">
+          <p className="text-sm">POWER</p>
+          <p className="text-3xl px-4">
+            {data.get("speed")
+              ? (
+                  ((data.get("bms.pack_current_raw")?.value as number) *
+                    (data.get("bms.pack_voltage_raw")?.value as number)) /
+                  1000
+                ).toFixed()
+              : "---"}{" "}
+            kW
+          </p>
+        </div>
+        <div className="flex flex-col items-center">
+          <p className="text-sm">RPM</p>
+          <p className="text-3xl px-4">
+            {data.get("speed")
+              ? (data.get("motors.rpm")?.value as number).toFixed()
+              : "---"}{" "}
+          </p>
         </div>
       </div>
     </div>
