@@ -1,8 +1,12 @@
 import { CountdownTimer } from "@/components/countdown-timer";
 import { HomeLinks } from "@/components/home-links";
 import { SupporterCarousel } from "@/components/supporter-carousel";
-import { SiInstagram } from "@icons-pack/react-simple-icons";
-import { InstagramIcon } from "lucide-react";
+import {
+  SiInstagram,
+  SiPlaycanvas,
+  SiViadeo,
+} from "@icons-pack/react-simple-icons";
+import { InstagramIcon, Video } from "lucide-react";
 
 import Link from "next/link";
 
@@ -57,8 +61,18 @@ export default function Home() {
               Competition is <b>coming</b>.
             </p>
           </div>
-          <CountdownTimer to={new Date("April 15, 2026 8:00 AM EST")} />
+          <CountdownTimer to={new Date("April 15, 2026 10:00 AM EST")} />
           <div className="my-12">
+            <Link
+              className="flex gap-4 border p-4 rounded-full bg-black text-white border-black/50 font-bold hover:scale-105 transition-all shadow-xl"
+              href={"/live"}
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <Video /> Watch the livestream
+            </Link>
+          </div>
+          <div className="mb-12 ">
             <a
               className="flex gap-4 border p-4 rounded-full bg-white text-black font-bold hover:scale-105 transition-all shadow-xl"
               href={"https://www.instagram.com/stevenseboat/"}
