@@ -57,15 +57,15 @@ export default function Home() {
         </svg>
         <div className="flex flex-col items-center px-4 bg-stone-700 border-b border-white/20 text-white">
           <div className="my-12">
-            <p className="font-sans font-medium text-3xl md:text-5xl">
-              Competition is <b>coming</b>.
+            <p className="font-sans font-medium text-3xl md:text-4xl">
+              Thank you for a great competition season!
             </p>
+            <p className="text-center text-xl mt-8">Stay tuned as we ramp up for next year!</p>
           </div>
-          <CountdownTimer to={new Date("April 15, 2026 11:00 AM EST")} />
           <div className="my-12">
             <Link
               className="flex items-center gap-4 border p-4 px-6 rounded-full bg-white text-black text-2xl font-bold hover:scale-105 transition-all shadow-xl"
-              href={"/live"}
+              href={"https://www.youtube.com/watch?v=XLGrvznslYY"}
               rel="noopener noreferrer"
               target="_blank"
             >
@@ -79,7 +79,7 @@ export default function Home() {
               rel="noopener noreferrer"
               target="_blank"
             >
-              <SiInstagram /> Follow the journey on Instagram
+              <SiInstagram /> Follow our journey on Instagram
             </a>
           </div>
         </div>
