@@ -1,4 +1,4 @@
-import { SiInstagram } from "@icons-pack/react-simple-icons";
+import { SiGithub, SiInstagram } from "@icons-pack/react-simple-icons";
 import Link from "next/link";
 
 export const Footer = () => {
@@ -35,6 +35,14 @@ export const Footer = () => {
                 The Team
               </Link>
             </li>
+            <a
+              href={"https://docs.stevenseboat.org/"}
+              rel="noopener noreferrer"
+              target="_blank"
+              className="underline decoration-dotted hover:decoration-solid"
+            >
+              Docs
+            </a>
           </ul>
         </div>
         <div className="flex-1">
@@ -76,6 +84,14 @@ export const Footer = () => {
         >
           <SiInstagram className="hover:text-black/50 transition-all" />
         </a>
+        <a
+          href={"https://www.github.com/Stevens-Electric-Boatworks"}
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <SiGithub className="hover:text-black/50 transition-all" />
+        </a>
+
         <a
           href={"https://www.linkedin.com/company/stevenseboat/"}
           rel="noopener noreferrer"

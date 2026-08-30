@@ -60,7 +60,9 @@ export default function Home() {
             <p className="font-sans font-medium text-3xl md:text-4xl">
               Thank you for a great competition season!
             </p>
-            <p className="text-center text-xl mt-8">Stay tuned as we ramp up for next year!</p>
+            <p className="text-center text-xl mt-8">
+              Stay tuned as we ramp up for next year!
+            </p>
           </div>
           <div className="my-12">
             <Link
@@ -169,20 +171,20 @@ export default function Home() {
         <div className="flex flex-col gap-4 pt-20 pb-8 items-center md:text-lg px-4 bg-gradient-to-b from-stone-700 to-stone-600 text-white">
           <span className="relative rounded-full px-6 py-3">
             <span className="absolute inset-0 flex items-center justify-center text-4xl md:text-6xl font-extrabold font-sans bg-gradient-to-r from-[#fde68a] to-[#f59e0b] bg-clip-text text-transparent filter blur-2xl opacity-70 animate-pulse pointer-events-none">
-              First Place
+              Third Place
             </span>
             <span className="relative z-10 flex items-center justify-center text-4xl md:text-6xl font-extrabold font-sans bg-gradient-to-r from-[#fde68a] to-[#f59e0b] bg-clip-text text-transparent">
-              First Place
+              Third Place
             </span>
           </span>
           <span className="text-sm text-white/70">
             ASNE&apos;s Promoting Electric Propulsion National Competition
           </span>
           <h2 className="text-2xl md:text-4xl font-inter text-center ">
-            2025 Planing Division
+            2026 Planing Division
           </h2>
           <a
-            href={"https://www.navalengineers.org/PEP25"}
+            href={"https://www.navalengineers.org/PEP26"}
             className="link text-white/75"
             rel="noopener noreferrer"
             target="_blank"
