@@ -9,7 +9,10 @@ import Link from "next/link";
 
 const POSTS_QUERY = `*[_type == "sponsors_page"][0] {
   heading,
-  body,
+  page_title,
+  title_description,
+  background_image,
+  background_image_height,
   tiers,
   sponsors[]-> {
     _id,
@@ -33,12 +36,13 @@ export default async function SupportUsPage() {
   console.log(JSON.stringify(sponsors_page));
   return (
     <div className="w-full">
-      <div className="relative">
+      <div className="relative overflow-hidden ">
         <div>
           <img
-            src={"/support/cover.jpg"}
-            className=" brightness-75 object-cover w-full h-[400px]"
-            alt="Manned Vessel in water"
+            src={sponsors_page.background_image
+              ? urlFor(sponsors_page.background_image)?.auto("format").url()
+              : "/support/cover.jpg"}
+            className={`brightness-90 object-cover w-full h-[${sponsors_page.background_image_height}px] blur-xs`}
           />
           <svg
             className="w-full h-12 -translate-y-11"
@@ -49,9 +53,14 @@ export default async function SupportUsPage() {
             <polygon points="0,0 50,12 100,0 100,12 0,12" fill="#44403b" />
           </svg>
         </div>
-        <h1 className="absolute inset-0 flex items-center justify-center text-center text-white font-inter font-bold text-6xl text-shadow-md">
-          Support Us
-        </h1>
+        <div className="flex flex-col">
+          <h1 className="gap-20 absolute inset-0 flex flex-col items-center justify-center text-center text-white font-inter font-bold text-6xl text-shadow-md">
+            {sponsors_page.page_title}
+            <div className="text-xl font-medium text-shadow-md">
+              {sponsors_page.title_description}
+            </div>
+          </h1>
+        </div>
       </div>
       <div className="h-8"></div>
       <div>
