@@ -1,8 +1,36 @@
-import { SupporterLink } from "@/components/supporter-link";
+import { SponsorCard } from "@/components/sponsor-card";
+import { client } from "@/sanity/client";
+import { createImageUrlBuilder, SanityImageSource } from '@sanity/image-url'
+
+import { SanityDocument } from "@sanity/client";
 import { Handshake } from "lucide-react";
 import Link from "next/link";
 
-export default function SupportUsPage() {
+
+const POSTS_QUERY = `*[_type == "sponsors_page"][0] {
+  heading,
+  body,
+  tiers,
+  sponsors[]-> {
+    _id,
+    name,
+    tier,
+    icon_dark,
+    icon_light,
+    href,
+    description,
+  }
+}`;
+const options = { next: { revalidate: 30 } };
+const { projectId, dataset } = client.config();
+const urlFor = (source: SanityImageSource) =>
+  projectId && dataset
+    ? createImageUrlBuilder({ projectId, dataset }).image(source)
+    : null;
+
+export default async function SupportUsPage() {
+  const sponsors_page = await client.fetch<SanityDocument>(POSTS_QUERY, {}, options);
+  console.log(JSON.stringify(sponsors_page));
   return (
     <div className="w-full">
       <div className="relative">
@@ -13,7 +41,7 @@ export default function SupportUsPage() {
             alt="Manned Vessel in water"
           />
           <svg
-            className="w-full h-12 -translate-y-12"
+            className="w-full h-12 -translate-y-11"
             style={{ pointerEvents: "none", position: "absolute", left: 0 }}
             viewBox="0 0 100 12"
             preserveAspectRatio="none"
@@ -25,7 +53,45 @@ export default function SupportUsPage() {
           Support Us
         </h1>
       </div>
-      <div className="flex flex-col gap-12 items-center bg-gradient-to-b text-white from-stone-700 to-stone-600 pt-12 pb-12 px-4 text-lg">
+      <div className="h-8"></div>
+      <div>
+        <h1 className="inset-0 flex items-center justify-center text-center text-white font-inter font-bold text-4xl text-shadow-md">
+          Our Sponsors
+        </h1>
+
+        <div className="flex flex-col gap-6 items-center w-full">
+          <h2 className="font-sans font-light text-3xl"></h2>
+          {sponsors_page.tiers.map((tier: string) => (
+            <h2 key={tier} className="flex flex-col justify-center text-center text-white font-inter font-bold text-2xl text-shadow-md">
+              {tier.substring(0, 1).toUpperCase() + tier.substring(1, tier.length) + " Tier"}
+              <div className="h-4"></div>
+              <div className="justify-center flex gap-6">
+                {sponsors_page.sponsors.filter((sponsor: any) => sponsor.tier == tier).map((sponsor: any) => (
+                  <div className="flex flex-col" key={sponsor}>
+                    <SponsorCard
+                      href={sponsor.href}
+                      icon={sponsor.icon_dark
+                        ? urlFor(sponsor.icon_dark)?.auto("format").url()
+                        : ""}
+                      description={sponsor.description}
+                    >
+                      <div>
+                        {sponsor.name}
+                      </div>
+                    </SponsorCard>
+
+                  </div>
+
+                ))}
+              </div>
+
+            </h2>
+          ))}
+        </div>
+        <div className="h-12"></div>
+      </div>
+
+      {/* <div className="flex flex-col gap-12 items-center bg-gradient-to-b text-white from-stone-700 to-stone-600 pt-12 pb-12 px-4 text-lg">
         <div className="max-w-3xl flex flex-col gap-12 items-center">
           <h2 className="font-bold font-sans text-4xl">Our Sponsors</h2>
           <div className="flex flex-col gap-6 items-center w-full">
@@ -137,7 +203,7 @@ export default function SupportUsPage() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       <svg
         className="w-full h-12 pointer-events-none"
         viewBox="0 0 100 20"
@@ -150,7 +216,7 @@ export default function SupportUsPage() {
           filter="blur(2px)"
         />
 
-        <polygon points="0,0 100,0 50,12" fill="#57534d" />
+        <polygon points="0,0 100,0 50,12" fill="#44403b" />
       </svg>
       <div
         className="flex flex-col items-center bg-gradient-to-b from-stone-300 to-stone-50 -mt-12 pt-20 pb-12 px-4 text-lg"
