@@ -23,7 +23,7 @@ export default function Home() {
             preload="metadata"
             className="relative -z-20 object-cover w-full h-[500px] md:h-[900px]"
           >
-            <source src="/landing-1.mp4" type="video/mp4" />
+            <source src="/landing.mp4" type="video/mp4" />
             <source src="/landing.webm" type="video/webm" />
             Uh-oh! Your browser does not support the video tag.
           </video>

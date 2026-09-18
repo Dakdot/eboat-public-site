@@ -113,7 +113,7 @@ export default function FleetPage() {
             </Link> */}
           </div>
           <img
-            src={"/fleet/unmanned-temp-1.jpg"}
+            src={"/fleet/unmanned-1.jpg"}
             className="rounded-full ml-auto aspect-square"
             width={250}
             alt="Computer rendering of unmanned vessel"
