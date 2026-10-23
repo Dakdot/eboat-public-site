@@ -1,12 +1,7 @@
-import { CountdownTimer } from "@/components/countdown-timer";
 import { HomeLinks } from "@/components/home-links";
 import { SupporterCarousel } from "@/components/supporter-carousel";
-import {
-  SiInstagram,
-  SiPlaycanvas,
-  SiViadeo,
-} from "@icons-pack/react-simple-icons";
-import { InstagramIcon, Video } from "lucide-react";
+import { SiInstagram } from "@icons-pack/react-simple-icons";
+import { Video } from "lucide-react";
 
 import Link from "next/link";
 

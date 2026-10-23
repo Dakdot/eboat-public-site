@@ -18,27 +18,6 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
-const newsreader = Newsreader({
-  variable: "--font-newsreader",
-  subsets: ["latin"],
-});
-
-const fira_sans = Fira_Sans({
-  variable: "--font-fira-sans",
-  weight: ["400", "500", "600", "700"],
-  subsets: ["latin"],
-});
-
-const fira_code = Fira_Code({
-  variable: "--font-fira-code",
-  subsets: ["latin"],
-});
-
-const roboto = Roboto({
-  variable: "--font-roboto",
-  subsets: ["latin"],
-});
-
 const pt_serif = PT_Serif({
   variable: "--font-pt-serif",
   weight: ["400", "700"],
@@ -67,7 +46,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${pt_serif.variable} ${fira_code.variable} ${fira_sans.variable} ${roboto.variable} ${seven_segment.variable} bg-stone-700 antialiased`}
+      className={`${inter.variable} ${pt_serif.variable}  ${seven_segment.variable} bg-stone-700 antialiased`}
     >
       <Script
         src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"

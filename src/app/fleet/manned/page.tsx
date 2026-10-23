@@ -1,5 +1,8 @@
 import { headers } from "next/headers";
 
+// Prefetching fails due to the isMobile check.
+export const instant = false;
+
 export default async function MannedAboutPage() {
   const headersList = await headers();
   const userAgent = headersList.get("user-agent") ?? "";
