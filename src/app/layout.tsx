@@ -2,10 +2,8 @@ import type { Metadata } from "next";
 import {
   Inter,
   Newsreader,
-  Fira_Code,
-  Fira_Sans,
-  Roboto,
   PT_Serif,
+  Playfair_Display,
 } from "next/font/google";
 import "./globals.css";
 import { NavBar } from "@/components/nav-bar";
@@ -20,6 +18,11 @@ const inter = Inter({
 
 const pt_serif = PT_Serif({
   variable: "--font-pt-serif",
+  weight: ["400", "700"],
+});
+
+const playfair_display = Playfair_Display({
+  variable: "--font-playfair-display",
   weight: ["400", "700"],
 });
 
@@ -46,7 +49,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${pt_serif.variable}  ${seven_segment.variable} bg-stone-700 antialiased`}
+      className={`${inter.variable} ${playfair_display.variable}  ${seven_segment.variable} bg-stone-700 antialiased`}
     >
       <Script
         src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"

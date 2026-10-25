@@ -31,10 +31,10 @@ export default function Home() {
                 className="pointer-events-none"
               />
               <div>
-                <h2 className="text-white/75 text-xl">
+                <h2 className="text-white/75 text-xl font-sans">
                   Stevens Institute of Technology
                 </h2>
-                <h1 className="font-inter font-bold text-3xl md:text-6xl text-white">
+                <h1 className=" font-bold text-3xl md:text-6xl text-white">
                   Electric Boatworks
                 </h1>
               </div>
@@ -52,16 +52,16 @@ export default function Home() {
         </svg>
         <div className="flex flex-col items-center px-4 bg-stone-700 border-b border-white/20 text-white">
           <div className="my-12">
-            <p className="font-sans font-medium text-3xl md:text-4xl">
+            <p className="font-bold font-serif text-3xl md:text-5xl">
               Thank you for a great competition season!
             </p>
-            <p className="text-center text-xl mt-8">
+            <p className="text-center text-xl mt-8 font-sans">
               Stay tuned as we ramp up for next year!
             </p>
           </div>
           <div className="my-12">
             <Link
-              className="flex items-center gap-4 border p-4 px-6 rounded-full bg-white text-black text-2xl font-bold hover:scale-105 transition-all shadow-xl"
+              className="flex items-center gap-4 border p-4 px-6 rounded-full bg-white text-black text-2xl font-medium hover:scale-105 transition-all shadow-xl"
               href={"https://www.youtube.com/watch?v=XLGrvznslYY"}
               rel="noopener noreferrer"
               target="_blank"
@@ -89,7 +89,7 @@ export default function Home() {
               alt="Electric boat on a trailer"
             />
             <div className="lg:max-w-xl space-y-2 md:text-lg text-black/85">
-              <h2 className="text-2xl md:text-4xl font-inter text-black">
+              <h2 className="text-2xl md:text-4xl text-black">
                 Engineering the <b>future</b> of sustainable watercraft.
               </h2>
               <p>

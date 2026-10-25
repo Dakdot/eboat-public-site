@@ -1,11 +1,20 @@
+import { PostAuthors } from "@/components/post-authors";
 import { client } from "@/sanity/client";
+import { Post, TeamMember } from "@/types/sanity";
 import { createImageUrlBuilder, SanityImageSource } from "@sanity/image-url";
 import { PortableText, type SanityDocument } from "next-sanity";
 import Link from "next/link";
 
 export const instant = false;
 
-const POST_QUERY = `*[_type == "post" && slug.current == $slug][0]`;
+const POST_QUERY = `*[_type == "post" && slug.current == $slug][0] {
+  ...,
+"authors": authors[]-> {
+    _id,
+    name,
+    portrait,
+    title
+  }}`;
 
 const { projectId, dataset } = client.config();
 const urlFor = (source: SanityImageSource) =>
@@ -20,7 +29,7 @@ export default async function PostPage({
 }: {
   params: Promise<{ slug: string }>;
 }) {
-  const post = await client.fetch<SanityDocument>(
+  const post = await client.fetch<Post & { authors: TeamMember[] }>(
     POST_QUERY,
     await params,
     options,
@@ -65,18 +74,26 @@ export default async function PostPage({
 
   return (
     <div className="w-full min-h-screen bg-white flex flex-col items-center">
-      <div className="max-w-prose my-8">
+      <div className="max-w-prose my-8 px-4">
         <div className="flex-3 flex flex-col">
-          <Link href="/blog" className="hover:underline">
-            ← Back to posts
-          </Link>
-          <div className="my-4 space-y-2">
+          <div>
+            <Link
+              href="/blog"
+              className="hover:underline link text-zinc-500 text-xs"
+            >
+              Back to posts
+            </Link>
+          </div>
+          <div className="my-8 space-y-4">
             <h1 className="text-4xl font-bold">{post.title}</h1>
-            <p className="font-sans uppercase text-sm font-medium text-zinc-600">
-              {new Date(post.publishedAt).toLocaleDateString("en-US", {
-                dateStyle: "long",
-              })}
+            <p className="uppercase text-sm font-medium text-zinc-600">
+              {post.publishedAt
+                ? new Date(post.publishedAt).toLocaleDateString("en-US", {
+                    dateStyle: "long",
+                  })
+                : "Not published yet"}
             </p>
+            {post.authors && <PostAuthors authors={post.authors} />}
           </div>
 
           {postImageUrl && (
@@ -89,6 +106,7 @@ export default async function PostPage({
               height="310"
             />
           )}
+
           <div className="prose">
             {Array.isArray(post.body) && (
               <PortableText value={post.body} components={components} />
